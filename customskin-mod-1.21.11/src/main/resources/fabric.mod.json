@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "customskin",
+  "version": "${version}",
+  "name": "Custom Skin (Client)",
+  "description": "Drop a PNG into .minecraft/customskin and it becomes your skin, client-side only.",
+  "authors": ["You"],
+  "environment": "client",
+  "entrypoints": { "client": ["com.customskin.CustomSkinClient"] },
+  "mixins": ["customskin.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
