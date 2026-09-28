@@ -1,7 +1,0 @@
-{
-  "required": true,
-  "package": "com.customskin.mixin",
-  "compatibilityLevel": "JAVA_21",
-  "client": ["AbstractClientPlayerMixin"],
-  "injectors": { "defaultRequire": 1 }
-}
