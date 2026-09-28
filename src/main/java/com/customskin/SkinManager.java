@@ -4,7 +4,7 @@ import com.mojang.blaze3d.platform.NativeImage;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.DynamicTexture;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 /** Loads the first .png in <gamedir>/customskin and registers it as a texture. */
 public final class SkinManager {
-	private static final ResourceLocation TEXTURE_ID = ResourceLocation.fromNamespaceAndPath("customskin", "player_skin");
+	private static final Identifier TEXTURE_ID = Identifier.fromNamespaceAndPath("customskin", "player_skin");
 
 	private static Path loadedFile;
 	private static long loadedModified = -1;
@@ -29,7 +29,7 @@ public final class SkinManager {
 
 	public static boolean isLoaded() { return loaded; }
 	public static boolean isSlim() { return slim; }
-	public static ResourceLocation textureId() { return TEXTURE_ID; }
+	public static Identifier textureId() { return TEXTURE_ID; }
 
 	/** Called from the render thread; re-checks the folder at most every 2 seconds so you can swap skins live. */
 	public static void refreshIfNeeded() {
